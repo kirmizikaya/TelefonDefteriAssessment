@@ -1,0 +1,27 @@
+version: '3.4'
+
+services:
+  api:
+    image: ${DOCKER_REGISTRY-}api
+    build:
+      context: .
+      dockerfile: Api/Dockerfile
+  phonebook:
+    image: ${DOCKER_REGISTRY-}phonebook
+    build:
+      context: .
+      dockerfile: PhoneBook.Api/Dockerfile
+  reporting:
+    image: ${DOCKER_REGISTRY-}reporting
+    build:
+      context: .
+      dockerfile: Reporting.Api/Dockerfile
+  rabbitmq:
+    image: rabbitmq:latest
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: example
+  adminer:
+    image: adminer

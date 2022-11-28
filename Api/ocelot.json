@@ -1,0 +1,46 @@
+{
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/person-api/{everything}",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44304
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/report-api/{everything}",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8082
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/person-api/{everything}",
+      "UpstreamHttpMethod": [
+        "Post"
+      ],
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44304
+        }
+      ]
+    }
+  ]
+} 
