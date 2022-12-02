@@ -20,7 +20,6 @@ namespace Reporting.Api
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>()
-                .UseLogging("Report.Service");
+                .UseStartup<Startup>();
     }
 }

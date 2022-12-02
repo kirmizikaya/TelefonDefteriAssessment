@@ -15,7 +15,7 @@ namespace PhoneBook.Api
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>()
-                .UseLogging("Person.Service");
+                .UseStartup<Startup>();
+
     }
 }
